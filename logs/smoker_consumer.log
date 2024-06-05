@@ -1,0 +1,17 @@
+2024-06-05 11:52:50,952.smoker_consumer.INFO ==================================================
+2024-06-05 11:52:50,952.smoker_consumer.INFO Today is 2024-06-05 at 11:52 AM
+2024-06-05 11:52:50,952.smoker_consumer.INFO Running on: nt Windows 10
+2024-06-05 11:52:50,953.smoker_consumer.INFO Python version:  3.11.9
+2024-06-05 11:52:50,953.smoker_consumer.INFO Python path: C:\Users\bambe\OneDrive\Documents\NMSU\44671_StreamingData\Module_6\44671_streaming-06-smart-smoker-consumer\.venv
+2024-06-05 11:52:50,953.smoker_consumer.INFO Working dir: C:\Users\bambe\OneDrive\Documents\NMSU\44671_StreamingData\Module_6\44671_streaming-06-smart-smoker-consumer
+2024-06-05 11:52:50,953.smoker_consumer.INFO ==================================================
+2024-06-05 11:52:50,966.smoker_consumer.INFO Queue 'Smoker' declared.
+2024-06-05 11:52:50,967.smoker_consumer.INFO Queue 'Roast' declared.
+2024-06-05 11:52:50,969.smoker_consumer.INFO Queue 'Ribs' declared.
+2024-06-05 11:52:50,975.smoker_consumer.INFO  [*] Ready for work. To exit press CTRL+C
+2024-06-05 12:04:14,409.smoker_consumer.WARNING Smoker alert! Temperature dropped by 15°F or more in 2.5 minutes. Initial: 232.8, Current: 200.2
+2024-06-05 12:04:19,420.smoker_consumer.WARNING Smoker alert! Temperature dropped by 15°F or more in 2.5 minutes. Initial: 232.8, Current: 200.2
+2024-06-05 12:04:39,526.smoker_consumer.WARNING Smoker alert! Temperature dropped by 15°F or more in 2.5 minutes. Initial: 237.9, Current: 205.9
+2024-06-05 12:04:44,541.smoker_consumer.WARNING Smoker alert! Temperature dropped by 15°F or more in 2.5 minutes. Initial: 237.9, Current: 205.9
+2024-06-05 12:08:20,203.smoker_consumer.WARNING Food stall alert! Ribs temperature change is 1°F or less in 10 minutes. Initial: 37.0, Current: 36.0
+2024-06-05 12:08:40,257.smoker_consumer.WARNING Food stall alert! Ribs temperature change is 1°F or less in 10 minutes. Initial: 37.0, Current: 36.4
