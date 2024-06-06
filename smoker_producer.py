@@ -3,7 +3,7 @@
     Make tasks harder/longer-running by adding dots at the end of the message.
 
     Author: Bambee Garfield
-    Date: May 1st, 2024
+    Date: June 7th, 2024
 """
 
 import pika
@@ -53,7 +53,7 @@ def read_and_send_smoker_temps_from_csv(file_path: str, host: str, queues: list)
                         logger.error(f"Error converting temperature value to float: {e}")
                 else:
                     logger.warning(f"Empty temperature value for {queue_name} at {timestamp}. Skipping.")
-            time.sleep(10)  # Sleep for 10 seconds before sending the next message
+            time.sleep(30)  # Sleep for 30 seconds before sending the next message
 
 
 def send_message(host: str, queue_name: str, message: str):

@@ -102,8 +102,8 @@ def callback(ch, method, properties, body):
         process_ribs_message(body)
     else:
         logger.warning(f"Received message from unknown queue: {queue_name}")
-    ch.basic_ack(delivery_tag=method.delivery_tag)
-    
+
+
 # Define main function to run the program
 def main(host: str = "localhost", queues: list = ["Smoker", "Roast", "Ribs"]):
     """Main function to consume messages from RabbitMQ."""

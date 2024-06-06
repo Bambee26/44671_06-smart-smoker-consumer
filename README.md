@@ -67,6 +67,12 @@ In the same VS Code terminal window, activate the virtual environment.
 6. Use docstring comments and add your name and date to your README and your code files. 
 7. Explain your project in the README. Include prerequisites and how to run your code. 
 
+## Run consumer and producer
+ 1. Open a CMD prompt as an administrator
+ 2. Change directories to the folder where your project is housed
+ 3. Run python smoker_producer.py in command prompt
+ 4. In VS Code, run smoker_consumer.py
+
 ## Reference
 
 - [RabbitMQ Tutorial - Work Queues](https://www.rabbitmq.com/tutorials/tutorial-two-python.html)
@@ -79,8 +85,12 @@ Show a example of your project here with:
 2. Smoker monitor
 3. Food A monitor (Roast)
 4. Food B monitor (Ribs)
+![alt text](image-1.png)
 
 Show significant events:
 1. Visible smoker alert with timestamp
+![alt text](<Screenshot 2024-06-06 150518.png>)
 2. Visible Food A (roast) with timestamp
+![alt text](image-2.png)
 3. Visible Food B (ribs) with timestamp
+![alt text](<Screenshot 2024-06-06 150710.png>)
