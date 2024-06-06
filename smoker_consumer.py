@@ -1,3 +1,11 @@
+"""
+    This program listens for work messages continuously and sends a warning per configurations.
+    
+    Author: Bambee Garfield
+    Date: June 7th, 2024
+
+"""
+# import tools
 import pika
 import sys
 import time
@@ -9,7 +17,7 @@ from util_logger import setup_logger
 
 logger, logname = setup_logger(__file__)
 
-# RabbitMQ setup
+# Setup RabbitMQ
 def connect_rabbitmq(host):
     """Connect to RabbitMQ and return connection and channel."""
     try:
@@ -22,6 +30,7 @@ def connect_rabbitmq(host):
         logger.error(f"Error: Connection to RabbitMQ server failed: {e}")
         sys.exit(1)
 
+# Create and declare queues
 def create_and_declare_queues(channel, queues):
     """Declare queues."""
     for queue_name in queues:
@@ -33,40 +42,69 @@ smoker_deque = deque(maxlen=5)  # 2.5 minutes window
 roast_deque = deque(maxlen=20)  # 10 minutes window
 ribs_deque = deque(maxlen=20)  # 10 minutes window
 
-def process_smoker_data(time, temp):
+# Implement additional alert actions here
+def process_smoker_data(smoker_deque, time, temp):
     smoker_deque.append((time, temp))
     if len(smoker_deque) == smoker_deque.maxlen:
-        _, initial_temp = smoker_deque[0]  # Unpack only the necessary variable
+        _, initial_temp = smoker_deque[0]
         if initial_temp - temp >= 15:
             logger.warning(f"Smoker alert! Temperature dropped by 15°F or more in 2.5 minutes. Initial: {initial_temp}, Current: {temp}")
-            # Implement additional alert actions here
 
-def process_food_data(food_deque, time, temp, food_name):
-    food_deque.append((time, temp))
-    if len(food_deque) == food_deque.maxlen:
-        _, initial_temp = food_deque[0]  # Unpack only the necessary variable
+def process_roast_data(roast_deque, time, temp):
+    roast_deque.append((time, temp))
+    if len(roast_deque) == roast_deque.maxlen:
+        _, initial_temp = roast_deque[0]
         if abs(initial_temp - temp) <= 1:
-            logger.warning(f"Food stall alert! {food_name} temperature change is 1°F or less in 10 minutes. Initial: {initial_temp}, Current: {temp}")
-            # Implement additional alert actions here
+            logger.warning(f"Roast alert! Temperature change is 1°F or less in 10 minutes. Initial: {initial_temp}, Current: {temp}")
 
+def process_ribs_data(ribs_deque, time, temp):
+    ribs_deque.append((time, temp))
+    if len(ribs_deque) == ribs_deque.maxlen:
+        _, initial_temp = ribs_deque[0] 
+        if abs(initial_temp - temp) <= 1:
+            logger.warning(f"Ribs alert! Temperature change is 1°F or less in 10 minutes. Initial: {initial_temp}, Current: {temp}")
+            
 
-# Define callback function
+def process_smoker_message(body):
+    """Process message received from the 'Smoker' queue."""
+    data = body.decode().split(',')
+    timestamp = datetime.strptime(data[0].split(': ')[1], '%m/%d/%Y %H:%M')
+    temperature = float(data[1].split(': ')[1])
+    logger.info(f"Processing Smoker message: {data}")
+    process_smoker_data(smoker_deque, timestamp, temperature)
+
+def process_roast_message(body):
+    """Process message received from the 'Roast' queue."""
+    data = body.decode().split(',')
+    timestamp = datetime.strptime(data[0].split(': ')[1], '%m/%d/%Y %H:%M')
+    temperature = float(data[1].split(': ')[1])
+    logger.info(f"Processing Roast message: {data}")
+    process_roast_data(roast_deque, timestamp, temperature)
+
+def process_ribs_message(body):
+    """Process message received from the 'Ribs' queue."""
+    data = body.decode().split(',')
+    timestamp = datetime.strptime(data[0].split(': ')[1], '%m/%d/%Y %H:%M')
+    temperature = float(data[1].split(': ')[1])
+    logger.info(f"Processing Ribs message: {data}")
+    process_ribs_data(ribs_deque, timestamp, temperature)
+
+# Define a callback function to be called when a message is received
 def callback(ch, method, properties, body):
     """Callback function to process received messages."""
-    data = body.decode().split(',')
-    timestamp = datetime.strptime(data[0].split(': ')[1], '%m/%d/%Y %H:%M')  # Extract and parse timestamp
-    temperature = float(data[1].split(': ')[1])  # Extract and parse temperature
-    queue_name = method.routing_key  # Get the queue name from the routing key
+    queue_name = method.routing_key
+    logger.info(f"Received message from queue: {queue_name}")
     if queue_name == 'Smoker':
-        process_smoker_data(timestamp, temperature)
+        process_smoker_message(body)
     elif queue_name == 'Roast':
-        process_food_data(roast_deque, timestamp, temperature, "Roast")
+        process_roast_message(body)
     elif queue_name == 'Ribs':
-        process_food_data(ribs_deque, timestamp, temperature, "Ribs")
+        process_ribs_message(body)
     else:
         logger.warning(f"Received message from unknown queue: {queue_name}")
-
-# Define main function
+    ch.basic_ack(delivery_tag=method.delivery_tag)
+    
+# Define main function to run the program
 def main(host: str = "localhost", queues: list = ["Smoker", "Roast", "Ribs"]):
     """Main function to consume messages from RabbitMQ."""
     try:

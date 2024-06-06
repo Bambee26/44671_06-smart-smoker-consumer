@@ -1,17 +1,102 @@
-2024-06-05 11:52:50,952.smoker_consumer.INFO ==================================================
-2024-06-05 11:52:50,952.smoker_consumer.INFO Today is 2024-06-05 at 11:52 AM
-2024-06-05 11:52:50,952.smoker_consumer.INFO Running on: nt Windows 10
-2024-06-05 11:52:50,953.smoker_consumer.INFO Python version:  3.11.9
-2024-06-05 11:52:50,953.smoker_consumer.INFO Python path: C:\Users\bambe\OneDrive\Documents\NMSU\44671_StreamingData\Module_6\44671_streaming-06-smart-smoker-consumer\.venv
-2024-06-05 11:52:50,953.smoker_consumer.INFO Working dir: C:\Users\bambe\OneDrive\Documents\NMSU\44671_StreamingData\Module_6\44671_streaming-06-smart-smoker-consumer
-2024-06-05 11:52:50,953.smoker_consumer.INFO ==================================================
-2024-06-05 11:52:50,966.smoker_consumer.INFO Queue 'Smoker' declared.
-2024-06-05 11:52:50,967.smoker_consumer.INFO Queue 'Roast' declared.
-2024-06-05 11:52:50,969.smoker_consumer.INFO Queue 'Ribs' declared.
-2024-06-05 11:52:50,975.smoker_consumer.INFO  [*] Ready for work. To exit press CTRL+C
-2024-06-05 12:04:14,409.smoker_consumer.WARNING Smoker alert! Temperature dropped by 15°F or more in 2.5 minutes. Initial: 232.8, Current: 200.2
-2024-06-05 12:04:19,420.smoker_consumer.WARNING Smoker alert! Temperature dropped by 15°F or more in 2.5 minutes. Initial: 232.8, Current: 200.2
-2024-06-05 12:04:39,526.smoker_consumer.WARNING Smoker alert! Temperature dropped by 15°F or more in 2.5 minutes. Initial: 237.9, Current: 205.9
-2024-06-05 12:04:44,541.smoker_consumer.WARNING Smoker alert! Temperature dropped by 15°F or more in 2.5 minutes. Initial: 237.9, Current: 205.9
-2024-06-05 12:08:20,203.smoker_consumer.WARNING Food stall alert! Ribs temperature change is 1°F or less in 10 minutes. Initial: 37.0, Current: 36.0
-2024-06-05 12:08:40,257.smoker_consumer.WARNING Food stall alert! Ribs temperature change is 1°F or less in 10 minutes. Initial: 37.0, Current: 36.4
+2024-06-06 10:14:18,972.smoker_consumer.INFO ==================================================
+2024-06-06 10:14:18,972.smoker_consumer.INFO Today is 2024-06-06 at 10:14 AM
+2024-06-06 10:14:18,972.smoker_consumer.INFO Running on: nt Windows 10
+2024-06-06 10:14:18,972.smoker_consumer.INFO Python version:  3.11.9
+2024-06-06 10:14:18,972.smoker_consumer.INFO Python path: C:\Users\bambe\OneDrive\Documents\NMSU\44671_StreamingData\Module_6\44671_streaming-06-smart-smoker-consumer\.venv
+2024-06-06 10:14:18,972.smoker_consumer.INFO Working dir: C:\Users\bambe\OneDrive\Documents\NMSU\44671_StreamingData\Module_6\44671_streaming-06-smart-smoker-consumer
+2024-06-06 10:14:18,972.smoker_consumer.INFO ==================================================
+2024-06-06 10:14:18,986.smoker_consumer.INFO Queue 'Smoker' declared.
+2024-06-06 10:14:18,986.smoker_consumer.INFO Queue 'Roast' declared.
+2024-06-06 10:14:18,987.smoker_consumer.INFO Queue 'Ribs' declared.
+2024-06-06 10:14:18,988.smoker_consumer.INFO  [*] Ready for work. To exit press CTRL+C
+2024-06-06 10:14:18,988.smoker_consumer.INFO Received message from queue: Smoker
+2024-06-06 10:14:18,990.smoker_consumer.INFO Processing Smoker message: ['Time: 5/22/2024 12:20', ' Smoker: 84.2']
+2024-06-06 10:14:22,516.smoker_consumer.INFO Received message from queue: Smoker
+2024-06-06 10:14:22,517.smoker_consumer.INFO Processing Smoker message: ['Time: 5/22/2024 12:20', ' Smoker: 84.2']
+2024-06-06 10:14:32,528.smoker_consumer.INFO Received message from queue: Smoker
+2024-06-06 10:14:32,529.smoker_consumer.INFO Processing Smoker message: ['Time: 5/22/2024 12:21', ' Smoker: 87.6']
+2024-06-06 10:14:42,538.smoker_consumer.INFO Received message from queue: Smoker
+2024-06-06 10:14:42,541.smoker_consumer.INFO Processing Smoker message: ['Time: 5/22/2024 12:21', ' Smoker: 87.6']
+2024-06-06 10:14:42,547.smoker_consumer.INFO Received message from queue: Roast
+2024-06-06 10:14:42,547.smoker_consumer.INFO Processing Roast message: ['Time: 5/22/2024 12:21', ' Roast: 67.0']
+2024-06-06 10:14:52,559.smoker_consumer.INFO Received message from queue: Smoker
+2024-06-06 10:14:52,559.smoker_consumer.INFO Processing Smoker message: ['Time: 5/22/2024 12:22', ' Smoker: 86.3']
+2024-06-06 10:14:52,566.smoker_consumer.INFO Received message from queue: Roast
+2024-06-06 10:14:52,566.smoker_consumer.INFO Processing Roast message: ['Time: 5/22/2024 12:22', ' Roast: 63.0']
+2024-06-06 10:15:02,607.smoker_consumer.INFO Received message from queue: Smoker
+2024-06-06 10:15:02,607.smoker_consumer.INFO Processing Smoker message: ['Time: 5/22/2024 12:22', ' Smoker: 86.3']
+2024-06-06 10:15:02,615.smoker_consumer.INFO Received message from queue: Roast
+2024-06-06 10:15:02,616.smoker_consumer.INFO Processing Roast message: ['Time: 5/22/2024 12:22', ' Roast: 63.0']
+2024-06-06 10:15:12,627.smoker_consumer.INFO Received message from queue: Smoker
+2024-06-06 10:15:12,628.smoker_consumer.INFO Processing Smoker message: ['Time: 5/22/2024 12:23', ' Smoker: 92.0']
+2024-06-06 10:15:12,635.smoker_consumer.INFO Received message from queue: Roast
+2024-06-06 10:15:12,636.smoker_consumer.INFO Processing Roast message: ['Time: 5/22/2024 12:23', ' Roast: 63.0']
+2024-06-06 10:15:12,647.smoker_consumer.INFO Received message from queue: Ribs
+2024-06-06 10:15:12,647.smoker_consumer.INFO Processing Ribs message: ['Time: 5/22/2024 12:23', ' Ribs: 54.0']
+2024-06-06 10:15:22,682.smoker_consumer.INFO Received message from queue: Smoker
+2024-06-06 10:15:22,683.smoker_consumer.INFO Processing Smoker message: ['Time: 5/22/2024 12:23', ' Smoker: 92.0']
+2024-06-06 10:15:22,714.smoker_consumer.INFO Received message from queue: Roast
+2024-06-06 10:15:22,714.smoker_consumer.INFO Processing Roast message: ['Time: 5/22/2024 12:23', ' Roast: 63.0']
+2024-06-06 10:15:22,745.smoker_consumer.INFO Received message from queue: Ribs
+2024-06-06 10:15:22,745.smoker_consumer.INFO Processing Ribs message: ['Time: 5/22/2024 12:23', ' Ribs: 53.0']
+2024-06-06 10:15:32,754.smoker_consumer.INFO Received message from queue: Smoker
+2024-06-06 10:15:32,755.smoker_consumer.INFO Processing Smoker message: ['Time: 5/22/2024 12:24', ' Smoker: 96.8']
+2024-06-06 10:15:32,763.smoker_consumer.INFO Received message from queue: Roast
+2024-06-06 10:15:32,763.smoker_consumer.INFO Processing Roast message: ['Time: 5/22/2024 12:24', ' Roast: 63.0']
+2024-06-06 10:15:32,764.smoker_consumer.WARNING Roast alert! Temperature change is 1°F or less in 10 minutes. Initial: 63.0, Current: 63.0
+2024-06-06 10:15:32,778.smoker_consumer.INFO Received message from queue: Ribs
+2024-06-06 10:15:32,778.smoker_consumer.INFO Processing Ribs message: ['Time: 5/22/2024 12:24', ' Ribs: 52.0']
+2024-06-06 10:15:42,790.smoker_consumer.INFO Received message from queue: Smoker
+2024-06-06 10:15:42,790.smoker_consumer.INFO Processing Smoker message: ['Time: 5/22/2024 12:24', ' Smoker: 36.8']
+2024-06-06 10:15:42,790.smoker_consumer.WARNING Smoker alert! Temperature dropped by 15°F or more in 2.5 minutes. Initial: 96.8, Current: 36.8
+2024-06-06 10:15:42,797.smoker_consumer.INFO Received message from queue: Roast
+2024-06-06 10:15:42,797.smoker_consumer.INFO Processing Roast message: ['Time: 5/22/2024 12:24', ' Roast: 62.0']
+2024-06-06 10:15:42,797.smoker_consumer.WARNING Roast alert! Temperature change is 1°F or less in 10 minutes. Initial: 63.0, Current: 62.0
+2024-06-06 10:15:42,810.smoker_consumer.INFO Received message from queue: Ribs
+2024-06-06 10:15:42,810.smoker_consumer.INFO Processing Ribs message: ['Time: 5/22/2024 12:24', ' Ribs: 52.0']
+2024-06-06 10:15:52,838.smoker_consumer.INFO Received message from queue: Smoker
+2024-06-06 10:15:52,839.smoker_consumer.INFO Processing Smoker message: ['Time: 5/22/2024 12:25', ' Smoker: 100.6']
+2024-06-06 10:15:52,847.smoker_consumer.INFO Received message from queue: Roast
+2024-06-06 10:15:52,847.smoker_consumer.INFO Processing Roast message: ['Time: 5/22/2024 12:25', ' Roast: 61.0']
+2024-06-06 10:15:52,865.smoker_consumer.INFO Received message from queue: Ribs
+2024-06-06 10:15:52,865.smoker_consumer.INFO Processing Ribs message: ['Time: 5/22/2024 12:25', ' Ribs: 52.0']
+2024-06-06 10:16:02,876.smoker_consumer.INFO Received message from queue: Smoker
+2024-06-06 10:16:02,877.smoker_consumer.INFO Processing Smoker message: ['Time: 5/22/2024 12:25', ' Smoker: 100.9']
+2024-06-06 10:16:02,882.smoker_consumer.INFO Received message from queue: Roast
+2024-06-06 10:16:02,883.smoker_consumer.INFO Processing Roast message: ['Time: 5/22/2024 12:25', ' Roast: 60.0']
+2024-06-06 10:16:02,894.smoker_consumer.INFO Received message from queue: Ribs
+2024-06-06 10:16:02,895.smoker_consumer.INFO Processing Ribs message: ['Time: 5/22/2024 12:25', ' Ribs: 52.0']
+2024-06-06 10:16:02,895.smoker_consumer.WARNING Ribs alert! Temperature change is 1°F or less in 10 minutes. Initial: 53.0, Current: 52.0
+2024-06-06 10:16:12,904.smoker_consumer.INFO Received message from queue: Smoker
+2024-06-06 10:16:12,904.smoker_consumer.INFO Processing Smoker message: ['Time: 5/22/2024 12:25', ' Smoker: 100.9']
+2024-06-06 10:16:12,912.smoker_consumer.INFO Received message from queue: Roast
+2024-06-06 10:16:12,913.smoker_consumer.INFO Processing Roast message: ['Time: 5/22/2024 12:25', ' Roast: 60.0']
+2024-06-06 10:16:12,920.smoker_consumer.INFO Received message from queue: Ribs
+2024-06-06 10:16:12,921.smoker_consumer.INFO Processing Ribs message: ['Time: 5/22/2024 12:25', ' Ribs: 52.0']
+2024-06-06 10:16:12,921.smoker_consumer.WARNING Ribs alert! Temperature change is 1°F or less in 10 minutes. Initial: 52.0, Current: 52.0
+2024-06-06 10:16:22,931.smoker_consumer.INFO Received message from queue: Smoker
+2024-06-06 10:16:22,931.smoker_consumer.INFO Processing Smoker message: ['Time: 5/22/2024 12:26', ' Smoker: 104.8']
+2024-06-06 10:16:22,938.smoker_consumer.INFO Received message from queue: Roast
+2024-06-06 10:16:22,938.smoker_consumer.INFO Processing Roast message: ['Time: 5/22/2024 12:26', ' Roast: 60.0']
+2024-06-06 10:16:22,946.smoker_consumer.INFO Received message from queue: Ribs
+2024-06-06 10:16:22,946.smoker_consumer.INFO Processing Ribs message: ['Time: 5/22/2024 12:26', ' Ribs: 52.0']
+2024-06-06 10:16:22,947.smoker_consumer.WARNING Ribs alert! Temperature change is 1°F or less in 10 minutes. Initial: 52.0, Current: 52.0
+2024-06-06 10:16:32,954.smoker_consumer.INFO Received message from queue: Smoker
+2024-06-06 10:16:32,955.smoker_consumer.INFO Processing Smoker message: ['Time: 5/22/2024 12:26', ' Smoker: 104.8']
+2024-06-06 10:16:32,960.smoker_consumer.INFO Received message from queue: Roast
+2024-06-06 10:16:32,960.smoker_consumer.INFO Processing Roast message: ['Time: 5/22/2024 12:26', ' Roast: 60.0']
+2024-06-06 10:16:32,961.smoker_consumer.WARNING Roast alert! Temperature change is 1°F or less in 10 minutes. Initial: 61.0, Current: 60.0
+2024-06-06 10:16:32,968.smoker_consumer.INFO Received message from queue: Ribs
+2024-06-06 10:16:32,969.smoker_consumer.INFO Processing Ribs message: ['Time: 5/22/2024 12:26', ' Ribs: 52.0']
+2024-06-06 10:16:32,969.smoker_consumer.WARNING Ribs alert! Temperature change is 1°F or less in 10 minutes. Initial: 52.0, Current: 52.0
+2024-06-06 10:16:42,979.smoker_consumer.INFO Received message from queue: Smoker
+2024-06-06 10:16:42,981.smoker_consumer.INFO Processing Smoker message: ['Time: 5/22/2024 12:27', ' Smoker: 108.2']
+2024-06-06 10:16:42,987.smoker_consumer.INFO Received message from queue: Ribs
+2024-06-06 10:16:42,987.smoker_consumer.INFO Processing Ribs message: ['Time: 5/22/2024 12:27', ' Ribs: 52.0']
+2024-06-06 10:16:42,987.smoker_consumer.WARNING Ribs alert! Temperature change is 1°F or less in 10 minutes. Initial: 52.0, Current: 52.0
+2024-06-06 10:16:52,995.smoker_consumer.INFO Received message from queue: Smoker
+2024-06-06 10:16:52,996.smoker_consumer.INFO Processing Smoker message: ['Time: 5/22/2024 12:27', ' Smoker: 108.2']
+2024-06-06 10:16:58,001.smoker_consumer.ERROR  User interrupted continuous listening process.
+2024-06-06 10:16:58,002.smoker_consumer.ERROR 
+Closing connection. Goodbye.
+
